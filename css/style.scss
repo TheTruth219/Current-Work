@@ -1,0 +1,256 @@
+a {
+  color: black;
+  font-weight: 500;
+
+  &:active,
+  &:focus,
+  &:visited &:hover {
+    color: grey;
+    text-decoration: underline;
+  }
+}
+
+.nav-pills {
+  .nav-link.active,
+  .show > .nav-link {
+    color: white;
+    background-color: black;
+  }
+}
+
+body {
+  padding-top: 0.8em;
+}
+
+.starter-template {
+  margin-top: 15%;
+}
+
+.navbar {
+  background-color: transparentize(white, .3);
+}
+
+.btnhide {
+  background-color: transparent;
+  border-color: transparent;
+  text-align: left;
+  padding-left: 0;
+  font-weight: bold;
+}
+// nav li:active,
+// nav li:focus,
+// nav li:hover {
+//   border-bottom: black;
+// }
+
+h2 {
+  font-size: 3rem;
+  margin-top: 2em;
+  padding-top: 3em;
+  padding-bottom: 2em;
+  font-family: 'Covered By Your Grace', cursive;
+}
+//////HERO Animation//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.opener {
+  animation: slide 0.5s ease-in-out 4s 1;
+  animation-fill-mode: backwards;
+  position: relative;
+}
+@keyframes slide {
+  from {
+    right: -10%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.del {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.show {
+  color: transparent;
+  animation-name: show;
+  animation-duration: 6s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes show {
+  from {
+    color: transparent;
+  }
+
+  to {
+    color: inherit;
+  }
+}
+@keyframes del {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.del:after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: black;
+  border-radius: 30px;
+  animation: del 0.5s ease-in-out 2s 1;
+  animation-fill-mode: forwards;
+}
+
+.overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  animation: wave 2s ease-out 1;
+  animation-direction: normal;
+  z-index: 2;
+  cursor: pointer;
+}
+@keyframes wave {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.lead {
+  animation: showlead 1.5s ease-out 8s 1;
+  animation-fill-mode: backwards;
+}
+@keyframes showlead {
+  from {
+    color: transparent;
+  }
+
+  to {
+    color: inherit;
+  }
+}
+/////////About///////////////////////////////
+
+section {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.aboutp {
+  font-weight: 400;
+  line-height: 1.9em;
+}
+///////Skills//////////////////////////////////////
+
+.col-sm-6 {
+  display: inline-block;
+}
+
+.skills {
+  list-style-type: none;
+  padding-left: 42%;
+  text-align: left;
+  position: relative;
+
+  & li {
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.react {
+  color: #00d8ff;
+}
+
+.vue {
+  color: #42b883;
+}
+
+.html5 {
+  color: #e34f26;
+}
+
+.css3 {
+  color: #42b883;
+}
+
+.javascript {
+  color: #f7df1e;
+}
+
+.npm {
+  color: #cb3837;
+}
+
+.git {
+  color: #e24329;
+}
+
+.frameworks {
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+.clickhere {
+  z-index: 10;
+}
+///////////////////////////////////////////Contact////////////////////
+
+.photo {
+  margin-bottom: 4em;
+}
+
+h4 {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.img-rounded {
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px 1px silver;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.email {
+  position: relative;
+  right: 6%;
+}
+
+.github {
+  position: relative;
+  left: 6%;
+}
+
+.buffer {
+  margin-bottom: 8em;
+}
+////////////////////////////////////////Footer/////////////////////////
+
+.bg-4 {
+  background-color: #2f2f2f;
+  color: #fff;
+}
