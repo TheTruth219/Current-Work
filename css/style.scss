@@ -10,6 +10,10 @@ a {
   }
 }
 
+%normal {
+  font-weight: normal;
+}
+
 .nav-pills {
   .nav-link.active,
   .show > .nav-link {
@@ -54,33 +58,10 @@ h2 {
 }
 //////HERO Animation//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.opener {
-  animation: slide 0.5s ease-in-out 4s 1;
-  animation-fill-mode: backwards;
-  position: relative;
-}
-@keyframes slide {
-  from {
-    right: -10%;
-  }
-
-  to {
-    right: 0;
-  }
-}
-
 .del {
   font-family: 'Covered By Your Grace', cursive;
   font-size: 1.2em;
   position: relative;
-}
-
-.show {
-  color: transparent;
-  animation-name: show;
-  animation-duration: 6s;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
 }
 @keyframes show {
   from {
@@ -91,27 +72,14 @@ h2 {
     color: inherit;
   }
 }
-@keyframes del {
-  0% {
-    width: 0;
+@keyframes showlead {
+  from {
+    color: transparent;
   }
 
-  100% {
-    width: 100%;
+  to {
+    color: inherit;
   }
-}
-
-.del:after {
-  content: ' ';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 0;
-  height: 5px;
-  background: black;
-  border-radius: 30px;
-  animation: del 0.5s ease-in-out 2s 1;
-  animation-fill-mode: forwards;
 }
 
 .overlay {
@@ -136,20 +104,6 @@ h2 {
 
   100% {
     background-color: transparent;
-  }
-}
-
-.lead {
-  animation: showlead 1.5s ease-out 8s 1;
-  animation-fill-mode: backwards;
-}
-@keyframes showlead {
-  from {
-    color: transparent;
-  }
-
-  to {
-    color: inherit;
   }
 }
 /////////About///////////////////////////////
@@ -183,30 +137,37 @@ section {
 
 .react {
   color: #00d8ff;
+  @extend %normal;
 }
 
 .vue {
   color: #42b883;
+  @extend %normal;
 }
 
 .html5 {
   color: #e34f26;
+  @extend %normal;
 }
 
 .css3 {
   color: #42b883;
+  @extend %normal;
 }
 
 .javascript {
   color: #f7df1e;
+  @extend %normal;
 }
 
 .npm {
   color: #cb3837;
+  @extend %normal;
 }
 
 .git {
   color: #e24329;
+  @extend %normal;
 }
 
 .frameworks {
@@ -255,4 +216,105 @@ h4 {
 .bg-4 {
   background-color: #2f2f2f;
   color: #fff;
+}
+//////////////////////////////Media Queries/////////////////////////////////////
+@media (min-width:700px) {
+  .del:after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: black;
+    border-radius: 30px;
+    animation: del 0.5s ease-in-out 2s 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes del {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  .show {
+    color: transparent;
+    animation-name: show;
+    animation-duration: 6s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .opener {
+    animation: slide 0.5s ease-in-out 4s 1;
+    animation-fill-mode: backwards;
+    position: relative;
+  }
+  @keyframes slide {
+    from {
+      right: -10%;
+    }
+
+    to {
+      right: 0;
+    }
+  }
+
+  .lead {
+    animation: showlead 1.5s ease-out 8s 1;
+    animation-fill-mode: backwards;
+  }
+}
+@media (max-width:699px) {
+  .del {
+    display: none;
+  }
+
+  .show {
+    color: transparent;
+    animation-name: show;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .opener {
+    animation: slide 0.5s ease-in-out 1s 1;
+    animation-fill-mode: backwards;
+    position: relative;
+  }
+  @keyframes slide {
+    from {
+      right: -25%;
+    }
+
+    to {
+      right: 0;
+    }
+  }
+
+  .lead {
+    animation: showlead 1.5s ease-out 3s 1;
+    animation-fill-mode: backwards;
+  }
+}
+@media (max-width:417px) {
+  opener {
+    animation: slide 0.5s ease-in-out 1s 1;
+    animation-fill-mode: backwards;
+    position: relative;
+  }
+  @keyframes slide {
+    from {
+      right: 0;
+    }
+
+    to {
+      right: 0;
+    }
+  }
 }
