@@ -1,5 +1,6 @@
+//compileOnSave
+@import "config";
 ///////////Component//////////////////////////////////////////////
-
 .hamburger {
   top: 24.7px;
   left: 3.1%;
@@ -21,7 +22,6 @@
   }
 }
 /* Icon 3 */
-
 .icon-three {
   position: fixed;
   top: 5px;
@@ -329,7 +329,7 @@ h4 {
   }
   @keyframes slide {
     from {
-      right: -9%;
+      right: -8%;
     }
 
     to {
