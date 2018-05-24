@@ -1,3 +1,75 @@
+///////////Component//////////////////////////////////////////////
+
+.hamburger {
+  top: 24.7px;
+  left: 3.1%;
+  width: 34px;
+  height: 4px;
+  background: black;
+  position: fixed;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transition: 0.5s;
+
+  &:before {
+    top: 14px;
+    left: 3.1%;
+  }
+
+  &:after {
+    top: 36px;
+    left: 3.1%;
+  }
+}
+/* Icon 3 */
+.icon-three {
+  position: fixed;
+  top: 5px;
+  left: 1%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.hamburger-three:after,
+.hamburger-three:before {
+  content: '';
+  position: fixed;
+  width: 34px;
+  height: 4px;
+  background: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.icon-three.active-three .hamburger-three {
+  background: rgba(0,0,0,0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+.icon-three.active-three .hamburger-three:before {
+  top: 24.7px;
+  transform: rotate(135deg);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.icon-three.active-three .hamburger-three:after {
+  top: 24.7px;
+  transform: rotate(225deg);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+///////////Component////////////////////////////////////////////////
+
+#noborder {
+  height: 30px;
+  width: 30px;
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
 a {
   color: black;
   font-weight: 500;
@@ -278,7 +350,7 @@ h4 {
     color: transparent;
     animation-name: show;
     animation-duration: 4s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
   }
 
@@ -298,7 +370,7 @@ h4 {
   }
 
   .lead {
-    animation: showlead 1.5s ease-out 3s 1;
+    animation: showlead 1.5s ease-out 2s 1;
     animation-fill-mode: backwards;
   }
 }
