@@ -1,147 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83448563-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-83448563-2');
-</script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83448563-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Open+Sans:600" rel="stylesheet">
-    <meta name="description" content="Nice to Meet You">
-    <meta name="author" content="Stephen Powers">
-    <link rel="icon" href="img\SP-favicon.png">
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-    <title>Current Works</title>
+    gtag('config', 'UA-83448563-2');
+  </script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="css\tether.min.css">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="css\style.min.css">
-  </head>
-  <body data-spy="scroll" data-target="#navbar" data-offset="80">
-    <nav id="navbar" class="navbar navbar-expand-sm  fixed-top">
-      <button id="noborder"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Open+Sans:600" rel="stylesheet">
+  <meta name="description" content="Nice to Meet You">
+  <meta name="author" content="Stephen Powers">
+  <link rel="icon" href="img\SP-favicon.png">
+
+  <title>Nice to Meet You</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css\tether.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css\style.min.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="800">
+  <nav id="navbar" class="navbar navbar-expand-sm  fixed-top hide">
+    <button id="noborder" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
         <div class="icon-three">
-          <div class="hamburger hamburger-three"></div>
+          <div class="hamburger hamburger-three "></div>
         </div>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav nav-pills">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#currentwork">Current Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav nav-pills">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item"> <a class="nav-link about-anchor" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link skills-anchor" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link current-work-anchor" href="#currentwork">Current Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link contact-anchor" href="#contact">Contact</a>
+        </li>
+      </ul>
+  </nav>
+  <a id="home"></a>
+  <div class="container-fluid">
 
-    <div class="container-fluid">
-
-      <div class="starter-template">
-        <h1 class="hi">Hi. I'm Steve </h1>
-        <br>
-        <h1 class="opener" id="home" >I Build <span class="del">User Interfaces</span> <span class="show">Experiences</span></h1>
-        <p class="lead">with the most up to date and reliable Front-End Technologies.<br> </p>
+    <div class="starter-template">
+      <h1 class="hi">Hi. I'm Steve </h1>
+      <br>
+      <h1 class="opener">I Build <span class="del">User Interfaces</span> <span class="show">Experiences</span></h1>
+      <p class="lead">with the most up to date and reliable Front-End Technologies. </p><br><br>
+      <a href="#about" class="seemore about-anchor">See More <br/><i class="fas fa-chevron-down fa-lg"></i></a>
+    </div>
+    <section class="disable">
+      <div class="container wow slideInUp" data-wow-delay="1s">
+        <h2 id="about"> About Me</h2>
+        <p class="aboutp wow slideInUp" data-wow-delay="1s">I'm a <strong>Front-End Web Developer</strong> based out of <strong>Phoenix, AZ</strong>, with a strong background in marketing, business development, and project management. This allows me to understand business and organizational needs from
+          a unique perspective and makes it a pleasure to work with UX/UI Design Teams. I pride myself on being able to effectively address challenges in clear and consise language for people in the organization that are less technically inclined. I also
+          wake up every day and make an effort to learn something new. I know I don't know everything, and I'm comfortable with that. I'm also comfortable with how resourceful I am, and how half the battle sometimes is choosing the <strong>RIGHT</strong>          battle to have.</p>
       </div>
-      <!-- <div class="overlay"></div> -->
-      <section >
-        <div class="container">
-          <h2  id="about"> About Me</h2>
-            <p class="aboutp">I'm a <strong>Front-End Web Developer</strong> based out of <strong>Phoenix, AZ</strong>, with a strong background in marketing, business development, and project management.
-            This allows me to understand business and organizational needs from a different perspective and makes collaboration effortless between UX/UI.
-            I pride myself on being able to effectively address challenges in both English and "Tech" for people in the organization that are less technically inclined.
-            I also wake up every day and make an effort to learn something new. I know I don't know everything, and I'm comfortable with that.
-            I'm also comfortable with how resourceful I am, and how half the battle sometimes is choosing the <strong>RIGHT</strong> battle to have.</p>
-        </div>
-      </section>
-      <section >
-        <div class="container">
-          <h2 id="skills" >Skills</h2>
-          <div class="row">
-              <div class="col-sm-6" >
-                <ul  class= "skills text-center">
-                  <li><i class="fab fa-html5 fa-lg html5"></i> HTML5</li>
-                  <li><i class="fab fa-css3 fa-lg css3"></i> CSS3</li>
-                  <li><i class="fab fa-js-square fa-lg javascript"></i> JavaScript</li>
-                  <li><i class="fab fa-npm fa-lg npm"></i> npm</li>
-                  <li><i class="fab fa-git-square fa-lg git"></i>  git</li>
-                </ul>
-              </div>
-              <div class="col-sm-6" >
-                <ul class= "skills text-center" style="list-style-type: inherit; padding-left:47%;">
-                  <li>Sass</li>
-                  <li>JQuery</li>
-                  <li>Bootstrap4</li>
-                  <li>AJAX</li>
-                  <li>XML</li>
-                </ul>
-              </div>
-            </div>
-
-            <h2 class="frameworks"> Frameworks </h2>
-              <div class="row">
-                <div class="col-sm-6">
-                  <li class="skills font-weight-bold"><i class="fab fa-react fa-lg react"></i> React</li>
-                </div>
-                <div class="col-sm-6">
-                  <li class="skills font-weight-bold"><i class="fab fa-vuejs fa-lg vue"></i> Vue</li>
-              </div>
+    </section>
+    <section class="disable">
+      <div class="container  ">
+        <h2 class="wow slideInUp " id="skills">Skills</h2>
+        <div class="row">
+          <div class="col-sm-6 ">
+            <ul class="skills text-center wow slideInUp">
+              <li><i class="fab fa-html5 fa-lg html5"></i> HTML5</li>
+              <li><i class="fab fa-css3 fa-lg css3"></i> CSS3</li>
+              <li><i class="fab fa-js-square fa-lg javascript"></i> JavaScript</li>
+              <li><i class="fab fa-npm fa-lg npm"></i> npm</li>
+              <li><i class="fab fa-git-square fa-lg git"></i> git</li>
+            </ul>
           </div>
+          <div class="col-sm-6">
+            <ul class="skills text-center  wow slideInUp" style="list-style-type: inherit; padding-left:47%;">
+              <li>Sass</li>
+              <li>JQuery</li>
+              <li>Bootstrap4</li>
+              <li>AJAX</li>
+              <li>XML</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="frameworks wow slideInUp "> Frameworks </h2>
+        <div class="row ">
+          <div class="col-sm-6 wow slideInUp">
+            <li class="skills font-weight-bold"><i class="fab fa-react fa-3x react"></i> React</li>
+          </div>
+          <div class="col-sm-6 wow slideInUp">
+            <li class="skills font-weight-bold"><i class="fab fa-vuejs fa-3x vue"></i> Vue</li>
+          </div>
+        </div>
       </div>
-      </section>
-      <section >
-        <div class="container">
-          <h2  id="currentwork"> Current Work</h2>
-            <p class="aboutp">I'm very interested in how cryptocurrencies and blockchain technology are revolutionizing different industries.
-            So I'm currently working with companies in this space. I won't bore with too many details, but you can find a semi-functional
-            dashboard prototype we're in the process of setting up for investors to offer loans via crypto or fiat currency to start-ups via a private investment network.
-            I encourage you to check it out if that's something that interests you.
-              <br><br><br><br><span ><a  href="https://www.github.com/TheTruth219/NOTA-Dash"><i class="fab fa-github-square fa-6x" style="color:#c9510c;"></i><br>Repository</a></span>
-          </p>
-        </div>
-      </section>
-      <section >
-        <div class="container">
-          <h2  id="contact"> Contact Me</h2>
-          <div class="photo"><img src="img\Profile200x.png" alt="" class="img-rounded">
-
-          </div>
-          <h4 class="buffer">  <span class="email"> <a href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon"><i class="far fa-envelope fa-2x"></i></a></span> <span> <a href="https://www.linkedin.com/in/stephen-powers-a5854a6/"><i  class="fab fa-linkedin fa-2x linkedin"></i></a> </span> <span class="github"><a href="https://github.com/TheTruth219"> <i class="fab fa-github-alt fa-2x git"></i></a> </span></h4>
-            <br><br><br>
+    </section>
+    <section class="disable">
+      <div class="container">
+        <h2 class="wow slideInUp" id="currentwork"> Current Work</h2>
+        <p class="currentp wow slideInUp">I'm very interested in how cryptocurrencies and blockchain technology are revolutionizing different industries, so I'm currently working with companies in this space. I won't bore with too many details, but you can find a semi-functional dashboard
+          prototype (with data visualization) we're in the process of setting up for investors to offer loans via crypto or fiat currency to start-ups by-way of a private investment network.
+          <br><br>
+          <strong>Stack:</strong> Node Sass, JS, FontAwesome, Highcharts, Bootstrap4
+          <br><br> I encourage you to check it out if that's something that interests you.
+          <br><br><br><br><span><a  href="https://www.github.com/TheTruth219/NOTA-Dash"><i class="fab fa-github-square fa-6x" style="color:#c9510c;"></i><br>Repository</a></span>
+        </p>
+      </div>
+    </section>
+    <section class="disable">
+      <div class="container  wow slideInUp">
+        <h2 class="wow slideInUp" id="contact"> Contact Me</h2>
+        <div class="photo wow slideInUp"><img src="img\Profile200x.png" alt="" class="img-rounded">
 
         </div>
-      </section>
-    </div><!-- /.container -->
+        <h4 class="buffer wow slideInUp">
+            <span class="email">
+              <a href="mailto:stephen@cloudpoweredtech.com?subject=We%20Should%20Talk%20Soon">
+                <i class="far fa-envelope fa-2x"></i>
+              </a>
+            </span>
+            <span>
+                <a href="https://www.linkedin.com/in/stephen-powers-a5854a6/">
+                <i  class="fab fa-linkedin fa-2x linkedin">
+                </i>
+                </a>
+            </span>
+              <span class="github">
+                <a href="https://github.com/TheTruth219">
+                <i class="fab fa-github-alt fa-2x git">
+                </i>
+                </a>
+              </span>
+          </h4>
+        <br><br><br>
 
-    <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="js\app.js"></script>
-    <script src="js\tether.min.js" charset="utf-8"></script>
-  <footer class="container-fluid bg-4 text-center">
-    <p> 2018 All Rights Reserved</p>
+      </div>
+    </section>
+  </div>
+  <!-- /.container -->
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="js\app.js"></script>
+  <script src="js\wow.js"></script>
+  <script src="js\tether.min.js"></script>
+  <footer class="container-fluid bg-4 text-center disable">
+    <small> &copy; Copyright 2018, All Rights Reserved</small>
   </footer>
-  </body>
+</body>
+
 </html>

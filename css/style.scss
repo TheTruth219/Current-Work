@@ -3,6 +3,8 @@
 
 ///////Variables//////////////////////////
 $basedelay : 1.5s;
+
+
 ///////////Hamburger Component//////////////////////////////////////////////
 .hamburger {
   top: 24.7px;
@@ -78,23 +80,30 @@ a {
   color: black;
   font-weight: 500;
 
-  &:active,
-  &:focus,
-  &:visited &:hover {
-    color: grey;
-    text-decoration: underline;
+  &:hover {
+    font-weight: 500;
+    color: inherit;
+    text-decoration: none;
   }
+
+
+
 }
 
 %normal {
   font-weight: normal;
 }
 
+
 .nav-pills {
+
+
   .nav-link.active,
   .show > .nav-link {
     color: white;
     background-color: black;
+
+
   }
 }
 
@@ -103,22 +112,24 @@ body {
 }
 
 .starter-template {
-  margin-top: 15%;
-  padding: 3rem 1.5rem;
+  margin-top: 7em;
+  padding: 5rem 1.5rem;
   text-align: center;
+  margin-bottom: 6em;
+  height: 65vh;
 }
 
 .navbar {
   background-color: transparentize(white, .3);
 }
 
-.btnhide {
-  background-color: transparent;
-  border-color: transparent;
-  text-align: left;
-  padding-left: 0;
-  font-weight: bold;
-}
+// .btnhide {
+//   background-color: transparent;
+//   border-color: transparent;
+//   text-align: left;
+//   padding-left: 0;
+//   font-weight: bold;
+// }
 // nav li:active,
 // nav li:focus,
 // nav li:hover {
@@ -133,6 +144,9 @@ h2 {
   font-family: 'Covered By Your Grace', cursive;
 }
 //////HERO Animation//////////////////////////////////////////////////////////////////////////////////////////////////////
+.disable {
+  display:none;
+}
 
 .hi {
     animation-name: show;
@@ -146,51 +160,63 @@ h2 {
   font-size: 1.2em;
   position: relative;
 }
-@keyframes show {
-  from {
-    color: transparent;
+@keyframes del {
+  0% {
+    width: 0;
   }
 
-  to {
-    color: inherit;
+  100% {
+    width: 100%;
   }
 }
 
+@keyframes show {
+  from {
+    opacity: 0;
+  }
 
-// .overlay {
-//   position: fixed;
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background-color: transparent;
-//   animation: wave 2s ease-out 1;
-//   animation-direction: normal;
-//   z-index: 2;
-//   cursor: pointer;
-// }
-// @keyframes wave {
-//   0% {
-//     background-color: black;
-//   }
-//
-//   100% {
-//     background-color: transparent;
-//   }
-// }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    right: -3em;
+  }
+
+  to {
+    right: 0;
+  }
+}
+@keyframes slide2 {
+  from {
+    right: -20%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.lead {
+  margin-bottom: 2em;
+}
 /////////About///////////////////////////////
+#about {
+  margin-top: 1em;
+  padding-top: 1.5em;
+}
 
 section {
   text-align: center;
   margin-top: 5em;
+
 }
 
 .aboutp {
   font-weight: 400;
   line-height: 1.9em;
+
 }
 ///////Skills//////////////////////////////////////
 
@@ -203,55 +229,72 @@ section {
   padding-left: 42%;
   text-align: left;
   position: relative;
+  list-style-image: url(data:0);
+
 
   & li {
     font-weight: bold;
     text-align: left;
+
   }
 }
 
 .react {
   color: #00d8ff;
   @extend %normal;
+
 }
 
 .vue {
   color: #42b883;
   @extend %normal;
+
 }
 
 .html5 {
   color: #e34f26;
   @extend %normal;
+
 }
 
 .css3 {
   color: #42b883;
   @extend %normal;
+
 }
 
 .javascript {
   color: #f7df1e;
   @extend %normal;
+
 }
 
 .npm {
   color: #cb3837;
   @extend %normal;
+
 }
 
 .git {
   color: #e24329;
   @extend %normal;
+
 }
 
 .frameworks {
   margin-top: 0;
   padding-top: 1em;
+
 }
 
 .clickhere {
   z-index: 10;
+}
+///////////////////////////////////////////Current///////////////////////////////////////////
+
+.currentp {
+  font-weight: 400;
+  line-height: 1.9em;
 }
 ///////////////////////////////////////////Contact///////////////////////////////////////////
 
@@ -294,6 +337,14 @@ h4 {
 }
 //////////////////////////////Media Queries/////////////////////////////////////
 @media (min-width:700px) {
+  %hide {
+    animation: show 2.5s ease-out ($basedelay + 6s) 1;
+    animation-fill-mode: backwards;
+  }
+  .show {
+    animation: show 3s ease-out ($basedelay + 3.5s) 1;
+    animation-fill-mode: backwards;
+  }
   .del:after {
     content: ' ';
     position: absolute;
@@ -306,95 +357,59 @@ h4 {
     animation: del 0.5s ease-in-out ($basedelay+2s) 1;
     animation-fill-mode: forwards;
   }
-  @keyframes del {
-    0% {
-      width: 0;
-    }
 
-    100% {
-      width: 100%;
-    }
-  }
 
-  .show {
-    color: transparent;
-    animation-name: show;
-    animation-duration: 6s;
-    animation-delay: ($basedelay+5s);
-    animation-fill-mode: forwards;
+  nav a, .seemore {
+    @extend %hide;
   }
 
   .opener {
     animation-name: slide, show;
     animation-duration: 0.5s, 3s;
-    animation-delay:($basedelay+4s), ($basedelay);
+    animation-delay:($basedelay+3s), ($basedelay);
     animation-fill-mode: backwards, backwards;
     position: relative;
   }
-  @keyframes slide {
-    from {
-      right: -8%;
-    }
 
-    to {
-      right: 0;
-    }
-  }
 
   .lead {
-    animation: show 1.5s ease-out ($basedelay+7s) 1;
+    animation: show 1.5s ease-out ($basedelay+5s) 1;
     animation-fill-mode: backwards;
   }
 }
+
 @media (max-width:699px) {
+
   .del {
     display: none;
   }
 
   .show {
-    color: transparent;
-    animation-name: show;
-    animation-duration: 4s;
-    animation-delay: ($basedelay+1s);
-    animation-fill-mode: forwards;
+    animation: none;
   }
-
+  nav a, .seemore {
+    animation: show 2.5s ease-out ($basedelay + 5s) 1;
+    animation-fill-mode: backwards;
+  }
   .opener {
-    animation-name: slide, show;
-    animation-duration: 0.5s, 3s;
-    animation-delay:($basedelay+.5s), ($basedelay);
-    animation-fill-mode: backwards, backwards;
+    animation-name: show;
+    animation-duration:  3s;
+    animation-delay: ($basedelay);
+    animation-fill-mode: backwards;
     position: relative;
   }
-  @keyframes slide {
-    from {
-      right: -20%;
-    }
 
-    to {
-      right: 0;
-    }
-  }
 
   .lead {
-    animation: show 1.5s ease-out ($basedelay+2.5s) 1;
+    animation: show 1.5s ease-out ($basedelay+2s) 1;
     animation-fill-mode: backwards;
   }
 }
 @media (max-width:417px) {
   opener {
-    animation: slide 0.5s ease-in-out 1s 1;
-    animation-fill-mode: backwards;
-    position: relative;
-  }
-  @keyframes slide {
-    from {
-      right: 0;
-    }
+    animation:none;
 
-    to {
-      right: 0;
-    }
   }
+
 
 }
